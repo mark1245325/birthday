@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Приглашение в Парк Металлурга</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f1f1f1;
+            padding: 20px;
+            max-width: 600px;
+            margin: auto;
+        }
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #2a6da0;
+        }
+        .button {
+            padding: 10px 20px;
+            margin: 10px 5px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            color: white;
+        }
+        .yes {
+            background-color: #28a745;
+        }
+        .no {
+            background-color: #dc3545;
+        }
+        .response {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎡 Приглашение в Парк Металлурга!</h1>
+        <p>Дорогие друзья!</p>
+        <p>Приглашаем вас провести весёлый день в <strong>Парке Металлурга</strong> на аттракционах! Будет весело, интересно и вкусно 😊</p>
+        <p><strong>Дата:</strong> 25 мая 2025<br>
+           <strong>Время:</strong> с 12:00 до 17:00<br>
+           <strong>Место:</strong> Парк Металлурга, г. [ваш город]</p>
+        
+        <p>Пожалуйста, ответьте, сможете ли вы прийти:</p>
+        <button class="button yes" onclick="vote('yes')">Да, буду</button>
+        <button class="button no" onclick="vote('no')">Нет, не смогу</button>
+        
+        <div class="response" id="responseMessage"></div>
+    </div>
+
+    <script>
+        function vote(answer) {
+            let response = document.getElementById("responseMessage");
+            if (answer === 'yes') {
+                response.textContent = "Спасибо! Мы рады, что вы будете с нами 🎉";
+            } else {
+                response.textContent = "Жаль, что не получится. Надеемся увидеть вас в следующий раз!";
+            }
+        }
+    </script>
+</body>
+</html>
