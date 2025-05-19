@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Приглашение на День защиты детей</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f0f8ff;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 700px;
+      margin: 40px auto;
+      padding: 30px;
+      background-color: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    }
+    h1 {
+      text-align: center;
+      color: #008080;
+    }
+    p {
+      font-size: 18px;
+      text-align: center;
+    }
+    form {
+      margin-top: 20px;
+    }
+    label {
+      display: block;
+      margin: 15px 0 5px;
+      font-weight: bold;
+    }
+    input, textarea, select {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 16px;
+    }
+    button {
+      margin-top: 20px;
+      padding: 12px 20px;
+      font-size: 16px;
+      color: #fff;
+      background-color: #008080;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #006666;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>ПРИГЛАШЕНИЕ</h1>
+    <p>Дорогие друзья!<br>
+    Приглашаем вас на праздник, посвящённый Дню защиты детей!<br>
+    Ждём вас 1 июня в 12:00 в Городском парке.<br>
+    Вас ждут весёлые игры, подарки, угощения и море улыбок!</p>
+
+    <form action="#" method="post">
+      <h2>Анкета участника</h2>
+
+      <label for="name">Имя ребёнка:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="age">Возраст:</label>
+      <input type="number" id="age" name="age" min="1" max="17" required>
+
+      <label for="parentName">Имя родителя/сопровождающего:</label>
+      <input type="text" id="parentName" name="parentName" required>
+
+      <label for="contact">Контактный номер:</label>
+      <input type="tel" id="contact" name="contact" placeholder="+7" required>
+
+      <label for="agree">Вы согласны на участие ребёнка в мероприятии?</label>
+      <select id="agree" name="agree" required>
+        <option value="">--Выберите--</option>
+        <option value="yes">Да</option>
+        <option value="no">Нет</option>
+      </select>
+
+      <label for="comments">Комментарии (аллергии, пожелания и др.):</label>
+      <textarea id="comments" name="comments" rows="4"></textarea>
+
+      <button type="submit">Отправить анкету</button>
+    </form>
+  </div>
+</body>
+</html>
